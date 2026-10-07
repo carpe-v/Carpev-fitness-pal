@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Carpev Fitness V2
+    </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <!-- =========================================== -->
+        <!-- HEADER -->
+        <!-- =========================================== -->
+
+        <section class="dashboard-header">
+
+            <div class="left-panel">
+
+                <div id="adminCard" class="admin-card">
+
+                    <img src="images/admin.png" alt="Admin">
+
+                </div>
+
+                <div class="filter-section">
+
+                    <div class="search-box">
+
+                        <input type="text" id="searchClient" placeholder="Caută client...">
+
+                    </div>
+
+                    <div class="filter-buttons">
+
+                        <button class="filter-btn active">
+
+                            Activi
+
+                        </button>
+
+                        <button class="filter-btn">
+
+                            Inactivi
+
+                        </button>
+
+                        <button class="filter-btn">
+
+                            Toți
+
+                        </button>
+                        <div id="addClientCard" class="add-client-button">
+
+                            <span>+</span>
+
+                            <span>Adaugă Client</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <section class="calendar-section">
+
+                <div id="calendar"></div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- =========================================== -->
+        <!-- CLIENTI -->
+        <!-- =========================================== -->
+
+        <section class="clients-section">
+
+            <div id="clientGrid" class="client-grid">
+
+                <!-- EXEMPLU -->
+
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- =========================================== -->
+    <!-- MODAL CLIENT -->
+    <!-- =========================================== -->
+
+    <div id="clientModal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2>
+
+                    Client Nou
+
+                </h2>
+
+                <button id="closeClientModal">
+
+                    ×
+
+                </button>
+
+            </div>
+<div class="modal-body">
+
+    <input
+        type="text"
+        id="clientName"
+        placeholder="Nume client">
+
+    <input
+        type="tel"
+        id="clientPhone"
+        placeholder="Telefon">
+
+    <input
+        type="email"
+        id="clientEmail"
+        placeholder="Email">
+
+    <input
+        type="text"
+        id="clientObjective"
+        placeholder="Obiectiv">
+
+    <select id="clientOffer">
+
+        <option value="">
+
+            Selectează ofertă
+
+        </option>
+
+    </select>
+
+    <button
+        id="saveClientBtn">
+
+        Salvează
+
+    </button>
+
+</div>
+
+        </div>
+
+    </div>
+
+
+  <!-- =========================================== -->
+    <!-- Modal sedinte-->
+    <!-- =========================================== -->
+
+
+    <!-- =========================================== -->
+    <!-- Modal Fisa client-->
+    <!-- =========================================== -->
+
+<div
+    id="clientFileModal"
+    class="client-file-modal">
+
+    <div
+        class="client-file-content">
+
+        <div
+            class="client-file-header">
+
+            <h2
+                id="clientFileName">
+
+                Fișa Client
+
+            </h2>
+
+            <button
+                id="closeClientFile">
+
+                ×
+
+            </button>
+
+        </div>
+
+        <div
+            id="clientFileBody"
+            class="client-file-body">
+
+        </div>
+
+    </div>
+
+</div>
+    <!-- =========================================== -->
+    <!-- SCRIPTS -->
+    <!-- =========================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/addclient.js"></script>
+    <script src="js/render.js"></script>
+   <script src="js/clientfile.js"></script>
+   <script src="js/session.js"></script>
+
+
+    <script src="js/main.js"></script>
+
+
+
+
+</body>
+
+</html>

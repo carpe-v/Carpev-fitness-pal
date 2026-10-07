@@ -1,0 +1,571 @@
+/* ==================================================
+   PAGE
+================================================== */
+
+.template-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.template-page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.template-page-title{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:#22c55e;
+
+}
+
+/* ==================================================
+   GRID
+================================================== */
+
+.template-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(
+                320px,
+                1fr
+            )
+        );
+
+    gap:20px;
+
+}
+
+/* ==================================================
+   ADD CARD
+================================================== */
+
+.template-add-card{
+
+    min-height:280px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    cursor:pointer;
+
+    border-radius:24px;
+
+    border:1px solid #334155;
+
+    background:
+        linear-gradient(
+            135deg,
+            #25344c,
+            #30415d
+        );
+
+    transition:.25s;
+
+}
+
+.template-add-card:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#22c55e;
+
+}
+
+.template-add-icon{
+
+    width:100px;
+
+    height:100px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#1c2940;
+
+    color:#22c55e;
+
+    font-size:60px;
+
+}
+
+/* ==================================================
+   CARD
+================================================== */
+
+.template-card{
+
+    min-height:280px;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    border-radius:24px;
+
+    border:1px solid #334155;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2b3b55,
+            #354663
+        );
+
+}
+
+.template-card-name{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    color:white;
+
+    margin-bottom:10px;
+
+}
+
+.template-preview-item{
+
+    padding:10px 12px;
+
+    border-radius:10px;
+
+    background:#0f172a;
+
+    color:white;
+
+    font-size:14px;
+
+}
+
+.template-preview-more{
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+}
+
+/* ==================================================
+   ACTIONS
+================================================== */
+
+.template-edit-btn{
+
+    width:100%;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    margin-top:auto;
+
+}
+
+.template-edit-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.template-delete-btn{
+
+    width:100%;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#dc2626;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+.template-delete-btn:hover{
+
+    background:#b91c1c;
+
+}
+
+/* ==================================================
+   MODAL
+================================================== */
+
+.template-modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            .75
+        );
+
+    justify-content:center;
+
+    align-items:center;
+
+    backdrop-filter:blur(4px);
+
+    z-index:9999;
+
+}
+
+.template-modal.show{
+
+    display:flex;
+
+}
+
+.template-modal-content{
+
+    width:900px;
+
+    max-width:95vw;
+
+    max-height:90vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    border-radius:24px;
+
+    border:1px solid #334155;
+
+    background:
+        linear-gradient(
+            180deg,
+            #1e293b,
+            #24324a
+        );
+
+}
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.template-modal-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:24px;
+
+    border-bottom:1px solid #334155;
+
+}
+
+.template-modal-header h2{
+
+    color:white;
+
+    font-size:28px;
+
+}
+
+.template-close-btn{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#dc2626;
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+.template-close-btn:hover{
+
+    background:#b91c1c;
+
+}
+
+/* ==================================================
+   BODY
+================================================== */
+
+.template-modal-body{
+
+    padding:24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    overflow:auto;
+
+}
+
+.template-modal-body h3{
+
+    color:#22c55e;
+
+    font-size:16px;
+
+    font-weight:700;
+
+}
+
+/* ==================================================
+   INPUT
+================================================== */
+
+.template-input{
+
+    height:52px;
+
+    padding:0 16px;
+
+    border-radius:14px;
+
+    border:1px solid #334155;
+
+    background:#0b1327;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.template-input:focus{
+
+    outline:none;
+
+    border-color:#22c55e;
+
+}
+
+/* ==================================================
+   EXERCISE CHIPS
+================================================== */
+
+.template-selection-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    border:1px solid #334155;
+
+    background:#0b1327;
+
+}
+
+.template-chip{
+
+    padding:10px 16px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#16233d;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+.template-chip:hover{
+
+    transform:translateY(-1px);
+
+}
+
+.template-chip.selected{
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #16a34a
+        );
+
+    color:white;
+
+}
+
+/* ==================================================
+   SAVE
+================================================== */
+
+.template-save-btn{
+
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #16a34a
+        );
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+.template-save-btn:hover{
+
+    transform:translateY(-1px);
+
+}
+.template-count{
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+}
+.template-preview-more{
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-top:6px;
+
+}
+
+.template-filter-chip{
+
+    padding:8px 14px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#16233d;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+.template-filter-chip.selected{
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #16a34a
+        );
+
+}

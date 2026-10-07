@@ -1,0 +1,55 @@
+body {
+	min-height: 100vh;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+header {
+
+	position: relative;
+	padding: 1.5rem 2rem;	
+	background: #08a13b;
+	color: #1f2933;
+}
+.content {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+}
+section {
+	Flex: 1;
+	position: relative;
+	padding: 2rem;
+	background: #f13a3a;
+}
+section.stanga {
+	flex:0.4;
+	background-image: url('st.png');
+		background-size: stretch;
+
+}
+section.dreapta {
+
+	flex:0.5;	
+	background-image: url('dr.png');
+	background-size: cover;	
+}
+
+main {
+	flex: 1;
+	position: relative;
+	padding: 2rem;
+	background: #3cabeb;
+		
+}	
+
+footer {
+	position: relative;
+	margin-top: auto;
+height: 3rem;
+	background: #1f2933;
+	color: #fff;
+	text-align: center;
+	
+}

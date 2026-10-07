@@ -1,0 +1,412 @@
+/* ==================================================
+   PAGE
+================================================== */
+
+.muscle-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.muscle-page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.muscle-page-title{
+
+    color:#22c55e;
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+/* ==================================================
+   ADD BUTTON
+================================================== */
+
+.muscle-add-btn{
+
+    height:45px;
+
+    padding:0 20px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #16a34a
+        );
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.muscle-add-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==================================================
+   GRID
+================================================== */
+
+.muscle-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(
+                280px,
+                1fr
+            )
+        );
+
+    gap:15px;
+
+}
+
+/* ==================================================
+   CARD
+================================================== */
+
+.muscle-card{
+
+    background:
+        linear-gradient(
+            135deg,
+            #1e293b,
+            #273449
+        );
+
+    border:1px solid #334155;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    min-height:130px;
+
+    transition:.25s;
+
+}
+
+.muscle-card:hover{
+
+    border-color:#22c55e;
+
+}
+
+.muscle-card-name{
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+/* ==================================================
+   ACTIONS
+================================================== */
+
+.muscle-card-actions{
+
+    margin-top:auto;
+
+}
+
+.muscle-delete-btn{
+
+    width:100%;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#dc2626;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.muscle-delete-btn:hover{
+
+    background:#b91c1c;
+
+}
+
+/* ==================================================
+   MODAL
+================================================== */
+
+.muscle-modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            .75
+        );
+
+    z-index:9999;
+
+    justify-content:center;
+
+    align-items:center;
+
+    backdrop-filter:blur(4px);
+
+}
+
+.muscle-modal.show{
+
+    display:flex;
+
+}
+
+.muscle-modal-content{
+
+    width:450px;
+
+    max-width:90vw;
+
+    background:
+        linear-gradient(
+            180deg,
+            #1e293b,
+            #24324a
+        );
+
+    border:1px solid #334155;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 25px 60px
+        rgba(
+            0,
+            0,
+            0,
+            .45
+        );
+
+}
+
+/* ==================================================
+   MODAL HEADER
+================================================== */
+
+.muscle-modal-header{
+
+    padding:22px 24px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border-bottom:
+        1px solid #334155;
+
+}
+
+.muscle-modal-header h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+/* ==================================================
+   CLOSE BUTTON
+================================================== */
+
+.muscle-close-btn{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ef4444;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.muscle-close-btn:hover{
+
+    background:#dc2626;
+
+    transform:scale(1.05);
+
+}
+
+/* ==================================================
+   MODAL BODY
+================================================== */
+
+.muscle-modal-body{
+
+    padding:24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* ==================================================
+   INPUT
+================================================== */
+
+.muscle-input{
+
+    height:52px;
+
+    padding:0 18px;
+
+    border:1px solid #334155;
+
+    border-radius:14px;
+
+    background:#0b1327;
+
+    color:white;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+.muscle-input::placeholder{
+
+    color:#64748b;
+
+}
+
+.muscle-input:focus{
+
+    outline:none;
+
+    border-color:#22c55e;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            34,
+            197,
+            94,
+            .15
+        );
+
+}
+
+/* ==================================================
+   SAVE BUTTON
+================================================== */
+
+.muscle-save-btn{
+
+    height:50px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #16a34a
+        );
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.muscle-save-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            34,
+            197,
+            94,
+            .25
+        );
+
+}

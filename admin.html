@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Carpev Fitness Admin
+    </title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/oferte.css">
+    <link rel="stylesheet" href="css/equipment.css">
+    <link rel="stylesheet" href="css/muscle.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/exercise.css">
+    <link rel="stylesheet" href="css/templates.css">
+    <link rel="stylesheet" href="">
+
+
+
+</head>
+
+<body>
+
+    <div id="adminApp">
+
+        <!-- ADMIN SIDEBAR -->
+
+        <aside class="admin-sidebar">
+
+            <button id="adminBackToDashboardBtn" class="admin-sidebar-btn admin-dashboard-btn">
+
+                ← Dashboard
+
+            </button>
+
+            <hr class="admin-sidebar-divider">
+
+            <button class="admin-sidebar-btn" data-page="exercises">
+
+                Exerciții
+
+            </button>
+
+            <button class="admin-sidebar-btn" data-page="categories">
+
+                Categorii
+
+            </button>
+            <button class="admin-sidebar-btn" data-page="muscles">
+
+                Grupe Musculare
+
+            </button>
+            <button class="admin-sidebar-btn" data-page="equipment">
+
+                Aparate
+
+            </button>
+
+            <button class="admin-sidebar-btn" data-page="offers">
+
+                Oferte
+
+            </button>
+
+            <button class="admin-sidebar-btn" data-page="templates">
+
+                Template-uri
+
+            </button>
+<button
+    id="seedDbBtn"
+    class="admin-btn admin-btn-success">
+
+    Populează DB
+
+</button>
+
+            <button id="clearDataBtn" class="admin-sidebar-btn admin-danger-btn" data-page="reset">
+
+                Ștergere Date
+
+            </button>
+
+        </aside>
+
+        <!-- ADMIN CONTENT -->
+
+        <main id="adminContent">
+
+            <div class="admin-home-page">
+
+                <h1 class="admin-home-title">
+
+                    Panou Administrare
+
+                </h1>
+
+                <p class="admin-home-description">
+
+                    Selectează o secțiune din meniu.
+
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- scripts
+  
+ 
+ 
+ -->
+
+
+    <script src="js/common.js"></script>
+
+    <script src="js/oferte.js"></script>
+   
+    <script src="js/equipment.js"></script>
+    <script src="js/muscle.js"></script>
+    <script src="js/categories.js"></script>
+
+    <script src="js/ex-filter.js"></script>
+    <script src="js/exercise.js"></script>
+
+    <script src="js/templates.js"></script>
+    <script src="js/seed.js"></script>
+  
+    <script src="js/admin.js"></script>
+ 
+</body>
+<!--  <script src="js/admin.js"></script>  -->
+
+</html>
