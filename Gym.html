@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Page.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+
+            <div class="content-header">
+                <h1>🏋️ Gym</h1>
+            </div>
+
+            <div class="content-body">
+
+                <div class="admin-cards">
+
+                    <!-- Workouts -->
+
+                    <div class="admin-card"
+                         onclick="window.location.href='Gym/Workouts/Workouts.html'">
+
+                        <div class="admin-card-icon">
+                            📅
+                        </div>
+
+                        <div class="admin-card-content">
+                            <h3>Workouts</h3>
+                            <p>Template-uri de antrenamente cu exerciții</p>
+                        </div>
+
+                        <div class="admin-card-arrow">
+                            →
+                        </div>
+
+                    </div>
+
+                    <!-- Exercitii -->
+
+                    <div class="admin-card"
+                         onclick="window.location.href='Gym/Exercitii/Exercitii.html'">
+
+                        <div class="admin-card-icon">
+                            🎯
+                        </div>
+
+                        <div class="admin-card-content">
+                            <h3>Exerciții</h3>
+                            <p>Exerciții cu categorii și grupe musculare</p>
+                        </div>
+
+                        <div class="admin-card-arrow">
+                            →
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="sidebar.js"></script>
+
+</body>
+
+</html>

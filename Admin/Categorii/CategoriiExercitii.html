@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorii Exerciții</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="CategoriiExercitii.css">
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+            <div class="content-header">
+                <div class="category-header">
+                    <button type="button" class="btn-back" onclick="window.location.href='../../Admin.html'">← Înapoi</button>
+                    <h1 class="page-title">Categorii Exerciții</h1>
+                    <button type="button" id="openModalBtn" class="btn-save btn-add">➕ Adaugă</button>
+                </div>
+            </div>
+
+            <div class="content-body">
+                <div class="category-container">
+                    <div class="admin-section category-list-container">
+                        <div class="toolbar">
+                            <div class="search-box">
+                                <input type="text" id="searchInput" class="search-input" placeholder="🔍 Caută categorie...">
+                            </div>
+                        </div>
+
+                        <div id="categoryList" class="category-grid">
+                            <div class="empty-message">📭 Nu există categorii. Adaugă prima categorie!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Adăugare / Editare -->
+    <div id="categoryModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="formTitle">Adaugă Categorie</h3>
+                <button type="button" class="btn-close-modal" id="closeCategoryModalBtn">✕</button>
+            </div>
+            <div class="modal-body">
+                <form id="categoryForm">
+                    <input type="hidden" id="categoryId" value="">
+
+                    <div class="form-group">
+                        <label for="categoryName">Nume categorie</label>
+                        <input type="text" id="categoryName" class="form-input"
+                               placeholder="Ex: Împins, Tractat..." maxlength="100" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="saveBtn" class="btn-save">Salvează</button>
+                        <button type="button" id="cancelBtn" class="btn-cancel">Anulează</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../sidebar.js"></script>
+    <script src="CategoriiExercitii.js"></script>
+</body>
+</html>

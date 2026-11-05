@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Raport Client</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="RaportClient.css">
+
+    <link rel="stylesheet" href="DigitalReport/digital.css">
+    <link rel="stylesheet" href="PrintReport/print.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <div class="content-header report-header">
+
+                <button
+                    onclick="history.back()"
+                    class="btn-back">
+                    ← Înapoi
+                </button>
+
+                <h1
+                    class="page-title"
+                    id="reportTitle">
+                    Raport Client
+                </h1>
+
+                <div></div>
+
+            </div>
+
+            <div class="content-body">
+
+                <div class="report-container">
+
+                    <!-- INFO -->
+
+                    <div class="admin-section report-info-section">
+
+                        <div class="report-info-grid">
+
+                            <div class="report-info-card">
+
+                                <span class="report-info-label">
+                                    Client
+                                </span>
+
+                                <span
+                                    id="reportClientName"
+                                    class="report-info-value">
+                                    -
+                                </span>
+
+                            </div>
+
+                            <div class="report-info-card">
+
+                                <span class="report-info-label">
+                                    Pachet
+                                </span>
+
+                                <span
+                                    id="reportPackageName"
+                                    class="report-info-value">
+                                    -
+                                </span>
+
+                            </div>
+
+                            <div class="report-info-card">
+
+                                <span class="report-info-label">
+                                    Ședințe Selectate
+                                </span>
+
+                                <span
+                                    id="selectedSessionsCount"
+                                    class="report-info-value">
+                                    0
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- MAIN LAYOUT -->
+
+                    <div class="report-main">
+
+                        <!-- LEFT -->
+
+                        <div class="sessions-panel">
+
+                            <div class="panel-header">
+
+                                <h3>
+                                    📋 Ședințe
+                                </h3>
+
+                                <span
+                                    id="confirmCount"
+                                    class="panel-count">
+                                    0 selectate
+                                </span>
+
+                            </div>
+
+                            <div
+                                id="sessionsCheckboxList"
+                                class="sessions-checkbox-list">
+
+                                <div class="loading-message">
+                                    Se încarcă ședințele...
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- RIGHT -->
+
+                        <div class="preview-panel">
+
+                            <div class="panel-header">
+
+                                <h3>
+                                    👁️ Previzualizare
+                                </h3>
+
+                                <div class="preview-tabs">
+
+                                    <button
+                                        class="preview-tab active"
+                                        data-tab="digital">
+
+                                        🖥️ Digital
+
+                                    </button>
+
+                                    <button
+                                        class="preview-tab"
+                                        data-tab="print">
+
+                                        🖨️ Print
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="preview-tab-content">
+
+                                <!-- DIGITAL -->
+
+                                <div
+                                    id="tabDigital"
+                                    class="preview-tab-panel active">
+
+                                    <div
+                                        id="previewDigital"
+                                        class="preview-scroll">
+
+                                        <div class="preview-empty">
+                                            Selectează ședințele pentru raport.
+                                        </div>
+
+                                    </div>
+
+                                    <div class="preview-actions-bar">
+
+                                        <button
+                                            id="downloadDigitalBtn"
+                                            class="btn-save">
+
+                                            📥 PDF Digital
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- PRINT -->
+
+                                <div
+                                    id="tabPrint"
+                                    class="preview-tab-panel">
+
+                                    <div
+                                        id="previewPrint"
+                                        class="preview-scroll print-view">
+
+                                        <div class="preview-empty">
+                                            Selectează ședințele pentru raport.
+                                        </div>
+
+                                    </div>
+
+                                    <div class="preview-actions-bar">
+
+                                        <button
+                                            id="downloadPrintBtn"
+                                            class="btn-save">
+
+                                            📥 PDF Print
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+   
+
+    <script src="DigitalReport/digital.js"></script>
+    <script src="PrintReport/print.js"></script>
+
+    <script src="RaportClient.js"></script>
+
+</body>
+
+</html>

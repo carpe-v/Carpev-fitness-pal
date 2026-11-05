@@ -1,0 +1,214 @@
+/* ============================================
+   CATEGORII EXERCIȚII
+   ============================================ */
+
+.category-header {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.page-title {
+    margin: 0;
+    text-align: center;
+}
+
+#openModalBtn {
+    justify-self: end;
+    width: 130px;
+}
+
+/* ============================================
+   CONTAINER
+   ============================================ */
+
+.category-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-list-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   CARD PANEL
+   ============================================ */
+
+.admin-section {
+    background: rgba(255,255,255,.02);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px;
+    padding: 30px;
+}
+
+/* ============================================
+   SEARCH
+   ============================================ */
+
+.toolbar {
+    margin-bottom: 24px;
+}
+
+.search-box {
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+}
+
+/* ============================================
+   LISTĂ CATEGORII
+   ============================================ */
+
+.category-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.category-card {
+    width: 100%;
+
+    background: rgba(255,255,255,.03);
+
+    border-left: 5px solid #d4a63f;
+    border-radius: 14px;
+
+    padding: 18px 22px;
+
+    transition: .25s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-2px);
+
+    background: rgba(255,255,255,.05);
+
+    box-shadow:
+        0 10px 24px rgba(0,0,0,.18);
+}
+
+.category-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* ============================================
+   ACȚIUNI
+   ============================================ */
+
+.category-card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit-card,
+.btn-delete-card {
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+    font-size: 16px;
+}
+
+.btn-edit-card {
+
+    background: rgba(59,130,246,.15);
+    color: #60a5fa;
+}
+
+.btn-edit-card:hover {
+
+    background: rgba(59,130,246,.3);
+}
+
+.btn-delete-card {
+
+    background: rgba(239,68,68,.15);
+    color: #f87171;
+}
+
+.btn-delete-card:hover {
+
+    background: rgba(239,68,68,.3);
+}
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+
+.empty-message {
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: #8b93a7;
+
+    font-size: 18px;
+
+    border: 2px dashed rgba(255,255,255,.12);
+
+    border-radius: 12px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    .category-header {
+
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .page-title {
+
+        order: -1;
+    }
+
+    .category-card-header {
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .category-card-actions {
+
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-back,
+    #openModalBtn {
+
+        width: 100%;
+    }
+}

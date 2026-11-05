@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pachete Client</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="PacheteClient.css">
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar-container"></div>
+        
+        <main class="main-content">
+            <div class="content-header">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <button onclick="history.back()" class="btn-back">← Înapoi</button>
+                    <div>
+                        <h1>📦 Pachete Client</h1>
+                        <p id="pacheteClientInfo">Selectează clientul pentru a vedea pachetele</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-body">
+                <div class="pachete-container">
+                    
+                    <!-- Selector Client -->
+                    <div class="admin-section no-print">
+                        <div class="client-selector">
+                            <label for="pacheteClient">Client</label>
+                            <select id="pacheteClient" class="form-input">
+                                <option value="">-- Selectează clientul --</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Pachete -->
+                    <div id="pacheteContent" style="display: none;">
+                        
+                        <!-- Info Client -->
+                        <div class="admin-section">
+                            <div class="client-info-bar">
+                                <div class="client-avatar" id="pacheteAvatar">
+                                    <span id="pacheteInitials">??</span>
+                                </div>
+                                <div>
+                                    <h2 id="pacheteName">Nume Client</h2>
+                                    <span id="pacheteStatus" class="status-badge">✅ Activ</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Carduri Pachete -->
+                        <div class="admin-section">
+                            <div class="section-header">
+                                <h3>📦 Pachete</h3>
+                                <button id="addPackageBtn" class="btn btn-add-sm">➕ Pachet Nou</button>
+                            </div>
+                            
+                            <div id="packagesList" class="packages-grid">
+                                <div class="empty-message">📭 Niciun pachet</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Adăugare Pachet -->
+    <div id="packageModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">➕ Pachet Nou</h3>
+                <button class="btn btn-close-modal" id="closePackageModal">✖️</button>
+            </div>
+            <div class="modal-body">
+                <form id="packageForm" class="client-form">
+                    <input type="hidden" id="packageId" value="">
+                    
+                    <div class="form-group">
+                        <label for="packageOffer">Pachet *</label>
+                        <select id="packageOffer" class="form-input" required>
+                            <option value="">-- Selectează pachetul --</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="packageStartDate">Data Început</label>
+                            <input type="date" id="packageStartDate" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="packageEndDate">Data Sfârșit</label>
+                            <input type="date" id="packageEndDate" class="form-input">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="packageNotes">Observații</label>
+                        <textarea id="packageNotes" class="form-input form-textarea" rows="2" placeholder="Note..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="savePackageBtn" class="btn btn-save">💾 Salvează</button>
+                <button id="cancelPackageBtn" class="btn btn-cancel">Anulează</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../sidebar.js"></script>
+    <script src="PacheteClient.js"></script>
+</body>
+</html>

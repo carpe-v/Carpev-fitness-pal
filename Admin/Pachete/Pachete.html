@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pachete</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="Pachete.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <div class="content-header package-header">
+
+                <button
+                    onclick="window.location.href='../../Admin.html'"
+                    class="btn-back">
+                    ← Înapoi
+                </button>
+
+                <h1 class="page-title">
+                    Pachete
+                </h1>
+
+                <button
+                    id="openModalBtn"
+                    class="btn-save">
+                    ➕ Adaugă
+                </button>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="content-body">
+
+                <div class="package-container">
+
+                    <div class="admin-section package-list-container">
+
+                        <div class="toolbar">
+
+                            <div class="search-box">
+
+                                <input
+                                    type="text"
+                                    id="searchInput"
+                                    class="search-input"
+                                    placeholder="🔍 Caută pachet...">
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            id="packageList"
+                            class="package-grid">
+
+                            <div class="empty-message">
+                                📭 Nu există pachete. Adaugă primul pachet!
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- MODAL ADD / EDIT -->
+
+    <div
+        id="packageModal"
+        class="modal"
+        style="display:none;">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h3 id="formTitle">
+                    Adaugă Pachet
+                </h3>
+
+                <button
+                    type="button"
+                    class="btn-close-modal"
+                    onclick="closePackageModal()">
+                    ✕
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <form id="packageForm">
+
+                    <input
+                        type="hidden"
+                        id="packageId">
+
+                    <!-- NUME -->
+
+                    <div class="form-group">
+
+                        <label for="packageName">
+                            Nume Pachet
+                        </label>
+
+                        <input
+                            type="text"
+                            id="packageName"
+                            class="form-input"
+                            placeholder="Ex: Basic, Standard, Premium"
+                            required>
+
+                    </div>
+
+                    <!-- SEDINTE -->
+
+                    <div class="form-group">
+
+                        <label for="packageSessions">
+                            Număr Ședințe
+                        </label>
+
+                        <input
+                            type="number"
+                            id="packageSessions"
+                            class="form-input"
+                            min="1"
+                            placeholder="Ex: 8"
+                            required>
+
+                    </div>
+
+                    <!-- PRET -->
+
+                    <div class="form-group">
+
+                        <label for="packagePrice">
+                            Preț (RON)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="packagePrice"
+                            class="form-input"
+                            min="0"
+                            step="1"
+                            placeholder="Ex: 500"
+                            required>
+
+                    </div>
+
+                    <!-- DEMO -->
+
+                    <div class="form-group">
+
+                        <label class="checkbox-label">
+
+                            <input
+                                type="checkbox"
+                                id="packageDemo">
+
+                            <span>
+                                Include ședință demo
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                    <!-- ACTIONS -->
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            id="saveBtn"
+                            class="btn-save">
+                            Salvează
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn-cancel"
+                            onclick="closePackageModal()">
+                            Anulează
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="Pachete.js"></script>
+
+</body>
+
+</html>

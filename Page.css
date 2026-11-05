@@ -1,0 +1,92 @@
+/* ============================================
+   STILURI PENTRU PAGINA ADMIN
+   ============================================ */
+
+/* Carduri - direct în content-body */
+.admin-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.admin-card {
+    background: #1c2430;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #2d2d3f;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.admin-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    border-color: #d4a853;
+}
+
+.admin-card:active {
+    transform: translateY(-1px);
+}
+
+.admin-card-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 168, 83, 0.1);
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.admin-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-card-content h3 {
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+    color: #c9d1d9;
+}
+
+.admin-card-content p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #8b8b9e;
+}
+
+.admin-card-count {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 2px 10px;
+    background: #d4a853;
+    color: #0d1117;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.admin-card-arrow {
+    font-size: 1.5rem;
+    color: #3d3d4f;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.admin-card:hover .admin-card-arrow {
+    color: #d4a853;
+    transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-cards {
+        grid-template-columns: 1fr;
+    }
+}

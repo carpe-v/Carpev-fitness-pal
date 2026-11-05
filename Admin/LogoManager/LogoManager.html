@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Logo Manager</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="LogoManager.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <div class="content-header logo-header">
+
+                <button
+                    onclick="window.location.href='../../Index.html'"
+                    class="btn-back">
+
+                    ← Dashboard
+
+                </button>
+
+                <h1 class="page-title">
+
+                    Logo Manager
+
+                </h1>
+
+                <div></div>
+
+            </div>
+
+            <div class="content-body">
+
+                <div class="logo-container">
+
+                    <!-- DIGITAL -->
+
+                    <div class="admin-section">
+
+                        <div class="section-header">
+
+                            <h2>
+                                🖥️ Logo Digital
+                            </h2>
+
+                        </div>
+
+                        <div class="logo-preview-wrapper">
+
+                            <img
+                                id="digitalLogoPreview"
+                                class="logo-preview"
+                                alt="Logo Digital">
+
+                        </div>
+
+                        <div class="logo-actions">
+
+                            <button
+                                id="uploadDigitalBtn"
+                                class="btn-save">
+
+                                📤 Încarcă Logo
+
+                            </button>
+
+                            <button
+                                id="removeDigitalBtn"
+                                class="btn-cancel">
+
+                                🗑️ Șterge Logo
+
+                            </button>
+
+                        </div>
+
+                        <input
+                            type="file"
+                            id="digitalLogoInput"
+                            accept="image/*"
+                            hidden>
+
+                    </div>
+
+                    <!-- PRINT -->
+
+                    <div class="admin-section">
+
+                        <div class="section-header">
+
+                            <h2>
+                                🖨️ Logo Print
+                            </h2>
+
+                        </div>
+
+                        <div class="logo-preview-wrapper">
+
+                            <img
+                                id="printLogoPreview"
+                                class="logo-preview"
+                                alt="Logo Print">
+
+                        </div>
+
+                        <div class="logo-actions">
+
+                            <button
+                                id="uploadPrintBtn"
+                                class="btn-save">
+
+                                📤 Încarcă Logo
+
+                            </button>
+
+                            <button
+                                id="removePrintBtn"
+                                class="btn-cancel">
+
+                                🗑️ Șterge Logo
+
+                            </button>
+
+                        </div>
+
+                        <input
+                            type="file"
+                            id="printLogoInput"
+                            accept="image/*"
+                            hidden>
+
+                    </div>
+
+                    <!-- INFO -->
+
+                    <div class="admin-section">
+
+                        <div class="section-header">
+
+                            <h2>
+                                ℹ️ Informații
+                            </h2>
+
+                        </div>
+
+                        <div class="logo-info">
+
+                            <p>
+                                Logo-ul Digital este folosit în previzualizările și rapoartele digitale.
+                            </p>
+
+                            <p>
+                                Logo-ul Print este folosit în rapoartele PDF și documentele tipărite.
+                            </p>
+
+                            <p>
+                                Logo-urile sunt salvate local în IndexedDB și sunt incluse automat în backup-ul JSON.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../../sidebar.js"></script>
+    <script src="../AdminDB.js"></script>
+    <script src="LogoManager.js"></script>
+
+</body>
+
+</html>

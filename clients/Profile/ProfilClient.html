@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Profil Client</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="ProfilClient.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <div class="content-header profile-header">
+
+                <button
+                    onclick="history.back()"
+                    class="btn-back">
+                    ← Înapoi
+                </button>
+
+                <h1
+                    class="page-title"
+                    id="profilePageTitle">
+                    Client
+                </h1>
+
+                <div></div>
+
+            </div>
+
+            <div class="content-body">
+
+                <div class="profile-container">
+
+                    <!-- DATE CLIENT -->
+
+                    <div class="admin-section profile-client-section">
+
+                        <div class="section-header">
+
+                            <h2>
+                                👤 Date Client
+                            </h2>
+
+                        </div>
+
+                        <div class="client-summary">
+
+                            <div class="client-contact">
+
+                                <div id="clientPhone">
+                                    📞 -
+                                </div>
+
+                                <div id="clientEmail">
+                                    📧 -
+                                </div>
+
+                            </div>
+
+                            <div class="client-profile-grid">
+
+                                <div class="profile-item">
+
+                                    <span class="label">
+                                        Data Nașterii
+                                    </span>
+
+                                    <span id="clientBirthDate">
+                                        -
+                                    </span>
+
+                                </div>
+
+                                <div class="profile-item">
+
+                                    <span class="label">
+                                        Greutate
+                                    </span>
+
+                                    <span id="clientWeight">
+                                        -
+                                    </span>
+
+                                </div>
+
+                                <div class="profile-item">
+
+                                    <span class="label">
+                                        Înălțime
+                                    </span>
+
+                                    <span id="clientHeight">
+                                        -
+                                    </span>
+
+                                </div>
+
+                                <div class="profile-item">
+
+                                    <span class="label">
+                                        BMI
+                                    </span>
+
+                                    <span id="clientBMI">
+                                        -
+                                    </span>
+
+                                </div>
+
+                                <div class="profile-item">
+
+                                    <span class="label">
+                                        Nivel Activitate
+                                    </span>
+
+                                    <span id="clientActivityLevel">
+                                        -
+                                    </span>
+
+                                </div>
+
+                                <div class="profile-item">
+
+                                    <span class="label">
+                                        Nivel Experiență
+                                    </span>
+
+                                    <span id="clientExperienceLevel">
+                                        -
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="client-notes-wrapper">
+
+                                <h3>
+                                    Observații
+                                </h3>
+
+                                <div
+                                    id="clientNotes"
+                                    class="client-notes">
+
+                                    -
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- PACHETE -->
+
+                    <div class="admin-section packages-section">
+
+                        <div class="section-header">
+
+                            <h2>
+                                💎 Pachete Client
+                            </h2>
+
+                            <button
+                                id="openPackageModalBtn"
+                                class="btn-save">
+
+                                ➕ Adaugă Pachet
+
+                            </button>
+
+                        </div>
+
+                        <div
+                            id="packagesContainer"
+                            class="packages-grid">
+
+                            <div class="empty-message">
+                                📭 Clientul nu are pachete atribuite.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- MODAL ADAUGARE PACHET -->
+
+    <div
+        id="packageModal"
+        class="modal"
+        style="display:none;">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h3>
+                    Adaugă Pachet
+                </h3>
+
+                <button
+                    type="button"
+                    class="btn-close-modal"
+                    onclick="closePackageModal()">
+                    ✕
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <form id="packageForm">
+
+                    <div class="form-group">
+
+                        <label for="packageSelect">
+                            Pachet
+                        </label>
+
+                        <select
+                            id="packageSelect"
+                            class="form-select"
+                            required>
+
+                            <option value="">
+                                Selectează Pachet
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="packageStartDate">
+                            Data Activare
+                        </label>
+
+                        <input
+                            type="date"
+                            id="packageStartDate"
+                            class="form-input"
+                            required>
+
+                    </div>
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="btn-save">
+                            Salvează
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn-cancel"
+                            onclick="closePackageModal()">
+                            Anulează
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+<div
+    id="scheduleSessionModal"
+    class="modal"
+    style="display:none;">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h3>
+                Programează Ședința
+            </h3>
+
+            <button
+                type="button"
+                class="btn-close-modal"
+                onclick="closeScheduleModal()">
+                ✕
+            </button>
+
+        </div>
+
+        <div class="modal-body">
+
+            <input
+                type="hidden"
+                id="schedulePackageId">
+
+            <input
+                type="hidden"
+                id="scheduleSessionNumber">
+
+            <div class="form-group">
+
+                <label>
+                    Data
+                </label>
+
+                <input
+                    type="date"
+                    id="scheduledDate"
+                    class="form-input">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+                    Ora
+                </label>
+
+                <input
+                    type="time"
+                    id="scheduledTime"
+                    class="form-input">
+
+            </div>
+
+            <div class="form-actions">
+
+                <button
+                    id="saveScheduleBtn"
+                    class="btn-save">
+
+                    Salvează
+
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-cancel"
+                    onclick="closeScheduleModal()">
+
+                    Anulează
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="ProfilClient.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupe Musculare</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="GrupeMusculare.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <div class="content-header muscle-header">
+
+                <button
+                    onclick="window.location.href='../../Admin.html'"
+                    class="btn-back">
+                    ← Înapoi
+                </button>
+
+                <h1 class="page-title">
+                    Grupe Musculare
+                </h1>
+
+                <button
+                    id="openModalBtn"
+                    class="btn-save">
+                    ➕ Adaugă
+                </button>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="content-body">
+
+                <div class="muscle-container">
+
+                    <div class="admin-section muscle-list-container">
+
+                        <div class="toolbar">
+
+                            <div class="search-box">
+
+                                <input
+                                    type="text"
+                                    id="searchInput"
+                                    class="search-input"
+                                    placeholder="🔍 Caută grupă musculară...">
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            id="muscleList"
+                            class="muscle-grid">
+
+                            <div class="empty-message">
+                                📭 Nu există grupe musculare. Adaugă prima grupă!
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- MODAL ADD / EDIT -->
+
+    <div
+        id="muscleModal"
+        class="modal"
+        style="display:none;">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h3 id="formTitle">
+                    Adaugă Grupă Musculară
+                </h3>
+
+                <button
+                    type="button"
+                    class="btn-close-modal"
+                    onclick="closeMuscleModal()">
+                    ✕
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <form id="muscleForm">
+
+                    <input
+                        type="hidden"
+                        id="muscleId">
+
+                    <div class="form-group">
+
+                        <label for="muscleName">
+                            Nume Grupă Musculară
+                        </label>
+
+                        <input
+                            type="text"
+                            id="muscleName"
+                            class="form-input"
+                            placeholder="Ex: Piept, Spate, Picioare"
+                            required>
+
+                    </div>
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            id="saveBtn"
+                            class="btn-save">
+                            Salvează
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn-cancel"
+                            onclick="closeMuscleModal()">
+                            Anulează
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="GrupeMusculare.js"></script>
+
+</body>
+
+</html>

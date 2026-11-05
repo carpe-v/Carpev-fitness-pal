@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workouts</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="Workouts.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <div class="content-header workout-header">
+
+                <button
+                    onclick="window.location.href='../../Gym.html'"
+                    class="btn-back">
+                    ← Înapoi
+                </button>
+
+                <h1 class="page-title">
+                    Workouts
+                </h1>
+
+                <button
+                    id="openModalBtn"
+                    class="btn-save">
+                    ➕ Adaugă
+                </button>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="content-body">
+
+                <div class="workout-container">
+
+                    <div class="admin-section workout-list-container">
+
+                        <!-- SEARCH -->
+
+                        <div class="toolbar">
+
+                            <div class="search-box">
+
+                                <input
+                                    type="text"
+                                    id="searchInput"
+                                    class="search-input"
+                                    placeholder="🔍 Caută workout...">
+
+                            </div>
+
+                            <!-- FILTERS -->
+
+                            <div class="filter-group">
+
+                                <select
+                                    id="filterCategory"
+                                    class="filter-select">
+
+                                    <option value="">
+                                        Toate Categoriile
+                                    </option>
+
+                                </select>
+
+                                <select
+                                    id="filterMuscle"
+                                    class="filter-select">
+
+                                    <option value="">
+                                        Toate Grupele Musculare
+                                    </option>
+
+                                </select>
+
+                                <select
+                                    id="filterEquipment"
+                                    class="filter-select">
+
+                                    <option value="">
+                                        Toate Echipamentele
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <!-- LIST -->
+
+                        <div
+                            id="workoutList"
+                            class="workout-grid">
+
+                            <div class="empty-message">
+                                📭 Nu există workout-uri. Adaugă primul workout!
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- MODAL ADD / EDIT -->
+
+    <div
+        id="workoutModal"
+        class="modal"
+        style="display:none;">
+
+        <div class="modal-content modal-large">
+
+            <div class="modal-header">
+
+                <h3 id="formTitle">
+                    Adaugă Workout
+                </h3>
+
+                <button
+                    type="button"
+                    class="btn-close-modal"
+                    onclick="closeWorkoutModal()">
+                    ✕
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <form id="workoutForm">
+
+                    <input
+                        type="hidden"
+                        id="workoutId">
+
+                    <!-- NUME -->
+
+                    <div class="form-group">
+
+                        <label for="workoutName">
+                            Nume Workout
+                        </label>
+
+                        <input
+                            type="text"
+                            id="workoutName"
+                            class="form-input"
+                            placeholder="Ex: Push Day, Upper Body, Full Body"
+                            required>
+
+                    </div>
+
+                    <!-- SELECTOR EXERCITII -->
+
+                    <div class="exercises-selector">
+
+                        <div class="selector-header">
+
+                            <h4>
+                                Exerciții Workout
+                            </h4>
+
+                            <span
+                                id="selectedCount"
+                                class="selected-count">
+                                0 selectate
+                            </span>
+
+                        </div>
+
+                        <!-- SEARCH EXERCIȚII -->
+
+                        <div class="modal-filters">
+
+                            <input
+                                type="text"
+                                id="exerciseSearch"
+                                class="form-input"
+                                placeholder="🔍 Caută exercițiu...">
+
+                            <div class="modal-filter-row">
+
+                                <select
+                                    id="exerciseFilterCategory"
+                                    class="filter-select">
+
+                                    <option value="">
+                                        Toate Categoriile
+                                    </option>
+
+                                </select>
+
+                                <select
+                                    id="exerciseFilterMuscle"
+                                    class="filter-select">
+
+                                    <option value="">
+                                        Toate Grupele
+                                    </option>
+
+                                </select>
+
+                                <select
+                                    id="exerciseFilterEquipment"
+                                    class="filter-select">
+
+                                    <option value="">
+                                        Toate Echipamentele
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <!-- LISTA EXERCIȚII -->
+
+                        <div
+                            id="exerciseSelector"
+                            class="selector-list">
+
+                            <div class="loading-message">
+                                Se încarcă exercițiile...
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ACTIONS -->
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            id="saveBtn"
+                            class="btn-save">
+                            Salvează
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn-cancel"
+                            onclick="closeWorkoutModal()">
+                            Anulează
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../../sidebar.js"></script>
+    <script src="Workouts.js"></script>
+
+</body>
+
+</html>

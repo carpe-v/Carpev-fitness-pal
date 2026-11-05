@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Ședință</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="Sedinta.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+
+            <div class="content-header sedinta-header-page">
+
+                <button
+                    onclick="history.back()"
+                    class="btn-back">
+                    ← Înapoi
+                </button>
+
+                <h1
+                    class="page-title"
+                    id="sessionTitle">
+                    Ședință
+                </h1>
+
+                <div></div>
+
+            </div>
+
+            <div class="content-body">
+
+                <div class="sedinta-container">
+
+                    <div class="admin-section">
+
+                        <div class="section-header">
+
+                            <h2>
+                                Exerciții
+                            </h2>
+
+                            <div class="header-actions">
+
+                                <button
+                                    id="openWorkoutModalBtn"
+                                    class="btn-cancel">
+
+                                    📋 Workout
+
+                                </button>
+
+                                <button
+                                    id="openExerciseModalBtn"
+                                    class="btn-save">
+
+                                    ➕ Exercițiu
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            id="exerciseList"
+                            class="exercise-grid">
+
+                            <div class="empty-message">
+                                📭 Nu există exerciții în această ședință.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- =========================================
+         MODAL EXERCIȚII
+         ========================================= -->
+
+    <div
+        id="exerciseModal"
+        class="modal"
+        style="display:none;">
+
+        <div class="modal-content modal-large">
+
+            <div class="modal-header">
+
+                <h3>
+                    Adaugă Exercițiu
+                </h3>
+
+                <button
+                    type="button"
+                    class="btn-close-modal"
+                    onclick="closeExerciseModal()">
+
+                    ✕
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <div class="modal-filters">
+
+                    <input
+                        type="text"
+                        id="exerciseSearch"
+                        class="form-input"
+                        placeholder="🔍 Caută exercițiu...">
+
+                    <div class="modal-filter-row">
+
+                        <select
+                            id="filterCategory"
+                            class="filter-select">
+
+                            <option value="">
+                                Toate Categoriile
+                            </option>
+
+                        </select>
+
+                        <select
+                            id="filterMuscle"
+                            class="filter-select">
+
+                            <option value="">
+                                Toate Grupele
+                            </option>
+
+                        </select>
+
+                        <select
+                            id="filterEquipment"
+                            class="filter-select">
+
+                            <option value="">
+                                Toate Echipamentele
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="exerciseSelector"
+                    class="selector-list">
+
+                    <div class="loading-message">
+                        Se încarcă exercițiile...
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =========================================
+         MODAL WORKOUT
+         ========================================= -->
+
+    <div
+        id="workoutModal"
+        class="modal"
+        style="display:none;">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h3>
+                    Importă Workout
+                </h3>
+
+                <button
+                    type="button"
+                    class="btn-close-modal"
+                    onclick="closeWorkoutModal()">
+
+                    ✕
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <div class="form-group">
+
+                    <label for="workoutSelect">
+                        Selectează Workout
+                    </label>
+
+                    <select
+                        id="workoutSelect"
+                        class="form-select">
+
+                        <option value="">
+                            Selectează workout-ul
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button
+                        id="importWorkoutBtn"
+                        type="button"
+                        class="btn-save">
+
+                        Importă
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn-cancel"
+                        onclick="closeWorkoutModal()">
+
+                        Anulează
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="Sedinta.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Acasă</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="Acasa.css">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.css"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+
+        <div id="sidebar-container"></div>
+
+        <!-- Main -->
+
+        <main class="main-content">
+
+            <div class="content-header">
+
+                <h1>
+                    Dashboard
+                </h1>
+
+            </div>
+
+            <div class="content-body">
+
+                <!-- KPI -->
+
+                <div class="dashboard-stats">
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-icon">
+                            👥
+                        </div>
+
+                        <div
+                            id="clientsCount"
+                            class="dashboard-value">
+                            0
+                        </div>
+
+                        <div class="dashboard-label">
+                            Clienți
+                        </div>
+
+                    </div>
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-icon">
+                            💎
+                        </div>
+
+                        <div
+                            id="packagesCount"
+                            class="dashboard-value">
+                            0
+                        </div>
+
+                        <div class="dashboard-label">
+                            Pachete Active
+                        </div>
+
+                    </div>
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-icon">
+                            🎯
+                        </div>
+
+                        <div
+                            id="exercisesCount"
+                            class="dashboard-value">
+                            0
+                        </div>
+
+                        <div class="dashboard-label">
+                            Exerciții
+                        </div>
+
+                    </div>
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-icon">
+                            🏋️
+                        </div>
+
+                        <div
+                            id="workoutsCount"
+                            class="dashboard-value">
+                            0
+                        </div>
+
+                        <div class="dashboard-label">
+                            Workouts
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CALENDAR -->
+
+                <div class="admin-section">
+
+                    <div class="section-header">
+
+                        <h2>
+                            📅 Calendar Ședințe
+                        </h2>
+
+                    </div>
+
+                    <div id="calendar"></div>
+
+                </div>
+
+                <!-- URMĂTOARELE ȘEDINȚE -->
+
+                <div class="admin-section">
+
+                    <div class="section-header">
+
+                        <h2>
+                            ⏰ Următoarele Ședințe
+                        </h2>
+
+                    </div>
+
+                    <div
+                        id="upcomingSessions"
+                        class="upcoming-sessions">
+
+                        <div class="empty-message">
+                            Nu există ședințe programate.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="sidebar.js"></script>
+    <script src="Acasa.js"></script>
+
+</body>
+
+</html>

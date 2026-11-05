@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clienți</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="clients/Clienti.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <div class="content-header client-header">
+
+                <h1 class="page-title">
+                    Clienți
+                </h1>
+
+                <button
+                    id="openModalBtn"
+                    class="btn-save">
+                    ➕ Adaugă
+                </button>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="content-body">
+
+                <div class="client-container">
+
+                    <div class="admin-section client-list-container">
+
+                        <div class="toolbar">
+
+                            <div class="search-box">
+
+                                <input
+                                    type="text"
+                                    id="searchInput"
+                                    class="search-input"
+                                    placeholder="🔍 Caută client...">
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            id="clientList"
+                            class="client-grid">
+
+                            <div class="empty-message">
+                                📭 Nu există clienți. Adaugă primul client!
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- MODAL ADD / EDIT -->
+
+    <div
+        id="clientModal"
+        class="modal"
+        style="display:none;">
+
+        <div class="modal-content modal-large">
+
+            <div class="modal-header">
+
+                <h3 id="formTitle">
+                    Adaugă Client
+                </h3>
+
+                <button
+                    type="button"
+                    class="btn-close-modal"
+                    onclick="closeClientModal()">
+                    ✕
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+<form id="clientForm">
+
+    <input
+        type="hidden"
+        id="clientId">
+
+    <div class="client-form-grid">
+
+        <!-- PRENUME -->
+
+        <div class="form-group">
+
+            <label for="clientFirstName">
+                Prenume
+            </label>
+
+            <input
+                type="text"
+                id="clientFirstName"
+                class="form-input"
+                placeholder="Ex: Ion"
+                required>
+
+        </div>
+
+        <!-- NUME -->
+
+        <div class="form-group">
+
+            <label for="clientLastName">
+                Nume
+            </label>
+
+            <input
+                type="text"
+                id="clientLastName"
+                class="form-input"
+                placeholder="Ex: Popescu"
+                required>
+
+        </div>
+
+        <!-- TELEFON -->
+
+        <div class="form-group">
+
+            <label for="clientPhone">
+                Telefon
+            </label>
+
+            <input
+                type="tel"
+                id="clientPhone"
+                class="form-input"
+                placeholder="07xxxxxxxx"
+                required>
+
+        </div>
+
+        <!-- EMAIL -->
+
+        <div class="form-group">
+
+            <label for="clientEmail">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="clientEmail"
+                class="form-input"
+                placeholder="client@email.com">
+
+        </div>
+
+        <!-- DATA NASTERII -->
+
+        <div class="form-group">
+
+            <label for="clientBirthDate">
+                Data Nașterii
+            </label>
+
+            <input
+                type="date"
+                id="clientBirthDate"
+                class="form-input">
+
+        </div>
+
+        <!-- GREUTATE -->
+
+        <div class="form-group">
+
+            <label for="clientWeight">
+                Greutate (kg)
+            </label>
+
+            <input
+                type="number"
+                id="clientWeight"
+                class="form-input"
+                min="20"
+                max="300"
+                step="0.1"
+                placeholder="Ex: 82">
+
+        </div>
+
+        <!-- INALTIME -->
+
+        <div class="form-group">
+
+            <label for="clientHeight">
+                Înălțime (cm)
+            </label>
+
+            <input
+                type="number"
+                id="clientHeight"
+                class="form-input"
+                min="100"
+                max="250"
+                placeholder="Ex: 180">
+
+        </div>
+
+        <!-- PACHET -->
+
+        <div class="form-group">
+
+            <label for="clientPackage">
+                Pachet
+            </label>
+
+            <select
+                id="clientPackage"
+                class="form-select">
+
+                <option value="">
+                    Selectează pachetul
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- ACTIVITATE -->
+
+        <div class="form-group">
+
+            <label for="clientActivityLevel">
+                Nivel Activitate
+            </label>
+
+            <select
+                id="clientActivityLevel"
+                class="form-select">
+
+                <option value="sedentar">
+                    Sedentar
+                </option>
+
+                <option value="usor">
+                    Activitate ușoară
+                </option>
+
+                <option value="moderat">
+                    Moderat activ
+                </option>
+
+                <option value="foarte_activ">
+                    Foarte activ
+                </option>
+
+                <option value="sportiv">
+                    Sportiv
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- EXPERIENTA -->
+
+        <div class="form-group">
+
+            <label for="clientExperienceLevel">
+                Nivel Experiență
+            </label>
+
+            <select
+                id="clientExperienceLevel"
+                class="form-select">
+
+                <option value="incepator">
+                    Începător
+                </option>
+
+                <option value="intermediar">
+                    Intermediar
+                </option>
+
+                <option value="avansat">
+                    Avansat
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- OBSERVATII -->
+
+        <div class="form-group full-width">
+
+            <label for="clientNotes">
+                Observații
+            </label>
+
+            <textarea
+                id="clientNotes"
+                class="form-textarea"
+                placeholder="Observații despre client..."></textarea>
+
+        </div>
+
+    </div>
+
+    <!-- ACTIONS -->
+
+    <div class="form-actions">
+
+        <button
+            type="submit"
+            id="saveBtn"
+            class="btn-save">
+            Salvează
+        </button>
+
+        <button
+            type="button"
+            class="btn-cancel"
+            onclick="closeClientModal()">
+            Anulează
+        </button>
+
+    </div>
+
+</form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="sidebar.js"></script>
+    <script src="clients/Clienti.js"></script>
+
+</body>
+
+</html>

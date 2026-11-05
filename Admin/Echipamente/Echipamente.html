@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echipamente</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="Echipamente.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <div class="content-header equipment-header">
+
+                <button
+                    onclick="window.location.href='../../Admin.html'"
+                    class="btn-back">
+                    ← Înapoi
+                </button>
+
+                <h1 class="page-title">
+                    Echipamente
+                </h1>
+
+                <button
+                    id="openModalBtn"
+                    class="btn-save">
+                    ➕ Adaugă
+                </button>
+
+            </div>
+
+            <!-- CONTENT -->
+
+            <div class="content-body">
+
+                <div class="equipment-container">
+
+                    <div class="admin-section equipment-list-container">
+
+                        <div class="toolbar">
+
+                            <div class="search-box">
+
+                                <input
+                                    type="text"
+                                    id="searchInput"
+                                    class="search-input"
+                                    placeholder="🔍 Caută echipament...">
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            id="equipmentList"
+                            class="equipment-grid">
+
+                            <div class="empty-message">
+                                📭 Nu există echipamente. Adaugă primul echipament!
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- MODAL ADD / EDIT -->
+
+    <div
+        id="equipmentModal"
+        class="modal"
+        style="display:none;">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h3 id="formTitle">
+                    Adaugă Echipament
+                </h3>
+
+                <button
+                    type="button"
+                    class="btn-close-modal"
+                    onclick="closeEquipmentModal()">
+                    ✕
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <form id="equipmentForm">
+
+                    <input
+                        type="hidden"
+                        id="equipmentId">
+
+                    <!-- NUME -->
+
+                    <div class="form-group">
+
+                        <label for="equipmentName">
+                            Nume Echipament
+                        </label>
+
+                        <input
+                            type="text"
+                            id="equipmentName"
+                            class="form-input"
+                            placeholder="Ex: Bench Press, Gantere, Bandă Alergare"
+                            required>
+
+                    </div>
+
+                    <!-- TIP -->
+
+                    <div class="form-group">
+
+                        <label for="equipmentType">
+                            Tip Echipament
+                        </label>
+
+                        <select
+                            id="equipmentType"
+                            class="form-select"
+                            required>
+
+                            <option value="">
+                                Selectează tipul
+                            </option>
+
+                            <option value="aparat">
+                                Aparat
+                            </option>
+
+                            <option value="obiect">
+                                Obiect
+                            </option>
+
+                            <option value="liber">
+                                Liber
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- ACTIONS -->
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            id="saveBtn"
+                            class="btn-save">
+                            Salvează
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn-cancel"
+                            onclick="closeEquipmentModal()">
+                            Anulează
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="Echipamente.js"></script>
+
+</body>
+
+</html>

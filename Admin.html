@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="Page.css">
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar-container"></div>
+        
+        <main class="main-content">
+            <div class="content-header">
+                <h1>📋 Panou de Administrare</h1>
+            </div>
+            
+            <div class="content-body">
+                <div class="admin-cards">
+                    <!-- Grupe Musculare -->
+                    <div class="admin-card" onclick="window.location.href='Admin/Grupe/GrupeMusculare.html'">
+                        <div class="admin-card-icon">💪</div>
+                        <div class="admin-card-content">
+                            <h3>Grupe Musculare</h3>
+                            <p>Gestionează grupele musculare țintă</p>
+                            <span class="admin-card-count" id="countGrupe">-</span>
+                        </div>
+                        <div class="admin-card-arrow">→</div>
+                    </div>
+                    
+                    <!-- Echipamente -->
+                    <div class="admin-card" onclick="window.location.href='Admin/Echipamente/Echipamente.html'">
+                        <div class="admin-card-icon">🏋️</div>
+                        <div class="admin-card-content">
+                            <h3>Echipamente</h3>
+                            <p>Gestionează echipamentele și accesoriile</p>
+                            <span class="admin-card-count" id="countEchipamente">-</span>
+                        </div>
+                        <div class="admin-card-arrow">→</div>
+                    </div>
+                    
+                    <!-- Pachete -->
+                    <div class="admin-card" onclick="window.location.href='Admin/Pachete/Pachete.html'">
+                        <div class="admin-card-icon">💎</div>
+                        <div class="admin-card-content">
+                            <h3>Pachete</h3>
+                            <p>Gestionează pachetele și prețurile</p>
+                            <span class="admin-card-count" id="countPachete">-</span>
+                        </div>
+                        <div class="admin-card-arrow">→</div>
+                    </div>
+                    
+                    <!-- Categorii Exerciții -->
+                    <div class="admin-card" onclick="window.location.href='Admin/Categorii/CategoriiExercitii.html'">
+                        <div class="admin-card-icon">📋</div>
+                        <div class="admin-card-content">
+                            <h3>Categorii Exerciții</h3>
+                            <p>Gestionează categoriile de exerciții</p>
+                            <span class="admin-card-count" id="countCategorii">-</span>
+                        </div>
+                        <div class="admin-card-arrow">→</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="sidebar.js"></script>
+    <script src="Admin/Admin.js"></script>
+</body>
+</html>

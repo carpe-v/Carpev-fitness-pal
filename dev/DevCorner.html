@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dev Corner</title>
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="DevCorner.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <div class="db-header">
+
+                <button
+                    onclick="window.location.href='../Index.html'"
+                    class="btn-back">
+
+                    ← Dashboard
+
+                </button>
+
+                <h1 class="page-title">
+                    Dev Corner
+                </h1>
+
+                <div></div>
+
+            </div>
+
+            <div class="content-body">
+
+                <div class="db-container">
+
+                    <!-- STATS -->
+
+                    <div class="admin-section">
+
+                        <div class="section-header">
+
+                            <h2>
+                                📊 Statistici
+                            </h2>
+
+                        </div>
+
+                        <div
+                            id="dbStats"
+                            class="db-stats">
+
+                            <div class="db-stat-card">
+                                <div class="db-stat-title">
+                                    Grupe Musculare
+                                </div>
+                                <div id="GrupeMusculareCount"
+                                     class="db-stat-value">
+                                    0
+                                </div>
+                            </div>
+
+                            <div class="db-stat-card">
+                                <div class="db-stat-title">
+                                    Categorii
+                                </div>
+                                <div id="CategoriiExercitiiCount"
+                                     class="db-stat-value">
+                                    0
+                                </div>
+                            </div>
+
+                            <div class="db-stat-card">
+                                <div class="db-stat-title">
+                                    Echipamente
+                                </div>
+                                <div id="EchipamenteCount"
+                                     class="db-stat-value">
+                                    0
+                                </div>
+                            </div>
+
+                            <div class="db-stat-card">
+                                <div class="db-stat-title">
+                                    Exerciții
+                                </div>
+                                <div id="ExercitiiCount"
+                                     class="db-stat-value">
+                                    0
+                                </div>
+                            </div>
+
+                            <div class="db-stat-card">
+                                <div class="db-stat-title">
+                                    Workouts
+                                </div>
+                                <div id="WorkoutsCount"
+                                     class="db-stat-value">
+                                    0
+                                </div>
+                            </div>
+
+                            <div class="db-stat-card">
+                                <div class="db-stat-title">
+                                    Pachete
+                                </div>
+                                <div id="PacheteCount"
+                                     class="db-stat-value">
+                                    0
+                                </div>
+                            </div>
+
+                            <div class="db-stat-card">
+                                <div class="db-stat-title">
+                                    Clienți
+                                </div>
+                                <div id="ClientiCount"
+                                     class="db-stat-value">
+                                    0
+                                </div>
+                            </div>
+
+                            <div class="db-stat-card">
+                                <div class="db-stat-title">
+                                    Pachete Client
+                                </div>
+                                <div id="ClientPackagesCount"
+                                     class="db-stat-value">
+                                    0
+                                </div>
+                            </div>
+
+                            <div class="db-stat-card">
+                                <div class="db-stat-title">
+                                    Ședințe
+                                </div>
+                                <div id="SedinteCount"
+                                     class="db-stat-value">
+                                    0
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- OPERAȚII -->
+
+                    <div class="admin-section">
+
+                        <div class="section-header">
+
+                            <h2>
+                                🛠 Administrare
+                            </h2>
+
+                        </div>
+
+                        <div class="db-actions">
+
+                            <button
+                                id="createDBBtn"
+                                class="btn-save">
+
+                                🆕 Inițializează Baza
+
+                            </button>
+
+                            <button
+                                id="generateDemoBtn"
+                                class="btn-save">
+
+                                🎲 Generează Demo
+
+                            </button>
+
+                            <button
+                                id="exportExcelBtn"
+                                class="btn-save">
+
+                                📥 Export data
+
+                            </button>
+
+                            <button
+                                id="importExcelBtn"
+                                class="btn-cancel">
+
+                                📤 Import data
+
+                            </button>
+
+                            <button
+                                id="deleteDBBtn"
+                                class="btn-danger1">
+
+                                💣 Reset Complet
+
+                            </button>
+
+                        </div>
+
+                        <input
+                            type="file"
+                            id="importFileInput"
+                           accept=".json"
+                            style="display:none;">
+
+                    </div>
+
+                    <!-- TABELE -->
+
+                    <div class="admin-section">
+
+                        <div class="section-header">
+
+                            <h2>
+                                🗃️ Tabele
+                            </h2>
+
+                        </div>
+
+                        <div
+                            id="tablesGrid"
+                            class="tables-grid">
+
+                            <div class="table-card"
+                                 data-table="GrupeMusculare">
+
+                                <div class="table-name">
+                                    GrupeMusculare
+                                </div>
+
+                                <div class="table-count">
+                                    Lookup
+                                </div>
+
+                            </div>
+
+                            <div class="table-card"
+                                 data-table="CategoriiExercitii">
+
+                                <div class="table-name">
+                                    CategoriiExercitii
+                                </div>
+
+                                <div class="table-count">
+                                    Lookup
+                                </div>
+
+                            </div>
+
+                            <div class="table-card"
+                                 data-table="Echipamente">
+
+                                <div class="table-name">
+                                    Echipamente
+                                </div>
+
+                                <div class="table-count">
+                                    Lookup
+                                </div>
+
+                            </div>
+
+                            <div class="table-card"
+                                 data-table="Exercitii">
+
+                                <div class="table-name">
+                                    Exercitii
+                                </div>
+
+                                <div class="table-count">
+                                    Date aplicație
+                                </div>
+
+                            </div>
+
+                            <div class="table-card"
+                                 data-table="Workouts">
+
+                                <div class="table-name">
+                                    Workouts
+                                </div>
+
+                                <div class="table-count">
+                                    Date aplicație
+                                </div>
+
+                            </div>
+
+                            <div class="table-card"
+                                 data-table="Pachete">
+
+                                <div class="table-name">
+                                    Pachete
+                                </div>
+
+                                <div class="table-count">
+                                    Date aplicație
+                                </div>
+
+                            </div>
+
+                            <div class="table-card"
+                                 data-table="Clienti">
+
+                                <div class="table-name">
+                                    Clienti
+                                </div>
+
+                                <div class="table-count">
+                                    Date aplicație
+                                </div>
+
+                            </div>
+
+                            <div class="table-card"
+                                 data-table="ClientPackages">
+
+                                <div class="table-name">
+                                    ClientPackages
+                                </div>
+
+                                <div class="table-count">
+                                    Relații client-pachet
+                                </div>
+
+                            </div>
+
+                            <div class="table-card"
+                                 data-table="Sedinte">
+
+                                <div class="table-name">
+                                    Sedinte
+                                </div>
+
+                                <div class="table-count">
+                                    Date execuție antrenamente
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- LOG -->
+
+                    <div class="admin-section">
+
+                        <div class="section-header">
+
+                            <h2>
+                                📝 Jurnal Operații
+                            </h2>
+
+                        </div>
+
+                        <div
+                            id="logContainer"
+                            class="log-container">
+
+                            <div class="log-entry">
+                                Sistem pregătit.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- MODAL TABELĂ -->
+
+    <div
+        id="tableDataModal"
+        class="modal"
+        style="display:none;">
+
+        <div class="modal-content modal-large">
+
+            <div class="modal-header">
+
+                <h3 id="tableModalTitle">
+                    Date Tabelă
+                </h3>
+
+                <button
+                    class="btn-close-modal"
+                    onclick="closeTableDataModal()">
+
+                    ✕
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <div
+                    id="tableDataContainer">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+
+    <script src="AdminDB.js"></script>
+    <script src="demo.js"></script>
+    <script src="export.js"></script>
+    <script src="DevCorner.js"></script>
+
+
+</body>
+
+</html>

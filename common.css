@@ -1,0 +1,447 @@
+/* ============================================
+   COMMON UI COMPONENTS
+   Butoane + Modaluri + Formulare
+   ============================================ */
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn-back {
+    width: 130px;
+
+    padding: 10px 16px;
+
+    background: transparent;
+    color: #667eea;
+
+    border: 2px solid #667eea;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.btn-back:hover {
+    background: #667eea;
+    color: #ffffff;
+}
+
+.btn-save {
+    min-width: 160px;
+    height: 52px;
+
+    border: none;
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c9972a,
+            #e2b443
+        );
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all .25s ease;
+}
+
+.btn-save:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(212,166,63,.35);
+}
+
+.btn-cancel {
+    min-width: 160px;
+    height: 52px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #303a52;
+    color: #d4d9e2;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all .25s ease;
+}
+
+.btn-cancel:hover {
+    background: #3e4963;
+}
+
+.btn-close-modal {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: rgba(255,255,255,.05);
+
+    color: #bfc7d6;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.btn-close-modal:hover {
+    background: rgba(255,255,255,.12);
+
+    color: #ffffff;
+}
+
+/* ============================================
+   BUTTONS CARD ACTIONS
+   ============================================ */
+
+.btn-edit-card,
+.btn-delete-card {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: all .2s ease;
+}
+
+.btn-edit-card {
+    background: rgba(59,130,246,.15);
+    color: #60a5fa;
+}
+
+.btn-edit-card:hover {
+    background: rgba(59,130,246,.30);
+
+    transform: translateY(-2px);
+}
+
+.btn-delete-card {
+    background: rgba(239,68,68,.15);
+    color: #f87171;
+}
+
+.btn-delete-card:hover {
+    background: rgba(239,68,68,.30);
+
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   MODAL
+   ============================================ */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(0,0,0,.75);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 99999;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 580px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #121827 0%,
+            #1b2333 100%
+        );
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.55);
+
+    animation: modalShow .25s ease;
+}
+
+@keyframes modalShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   MODAL HEADER
+   ============================================ */
+
+.modal-header {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 28px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+}
+
+.modal-header::after {
+    content: "";
+
+    position: absolute;
+
+    left: 28px;
+    bottom: 0;
+
+    width: 70px;
+    height: 3px;
+
+    border-radius: 999px;
+
+    background: #d4a63f;
+}
+
+.modal-header h3 {
+    margin: 0;
+
+    color: #d4a63f;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+/* ============================================
+   MODAL BODY
+   ============================================ */
+
+.modal-body {
+    padding: 32px;
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #cfd6e4;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.form-input {
+    width: 100%;
+    height: 58px;
+
+    padding: 0 18px;
+
+    background: #0b111d;
+    color: #ffffff;
+
+    border: 2px solid rgba(255,255,255,.08);
+
+    border-radius: 14px;
+
+    font-size: 16px;
+
+    transition: all .25s ease;
+}
+
+.form-input::placeholder {
+    color: #717a8c;
+}
+
+.form-input:focus {
+    outline: none;
+
+    border-color: #d4a63f;
+
+    box-shadow:
+        0 0 0 4px rgba(212,166,63,.15);
+}
+
+.form-textarea {
+    width: 100%;
+
+    min-height: 120px;
+
+    resize: vertical;
+
+    padding: 16px 18px;
+
+    background: #0b111d;
+    color: #ffffff;
+
+    border: 2px solid rgba(255,255,255,.08);
+
+    border-radius: 14px;
+
+    font-size: 15px;
+
+    transition: all .25s ease;
+}
+
+.form-textarea:focus {
+    outline: none;
+
+    border-color: #d4a63f;
+
+    box-shadow:
+        0 0 0 4px rgba(212,166,63,.15);
+}
+
+.form-select {
+    width: 100%;
+    height: 58px;
+
+    padding: 0 18px;
+
+    background: #0b111d;
+    color: #ffffff;
+
+    border: 2px solid rgba(255,255,255,.08);
+
+    border-radius: 14px;
+
+    font-size: 16px;
+
+    transition: all .25s ease;
+}
+
+.form-select:focus {
+    outline: none;
+
+    border-color: #d4a63f;
+
+    box-shadow:
+        0 0 0 4px rgba(212,166,63,.15);
+}
+
+/* ============================================
+   FORM ACTIONS
+   ============================================ */
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 32px;
+    padding-top: 24px;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    .btn-back,
+    .btn-save,
+    .btn-cancel {
+        width: 100%;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .modal {
+        padding: 12px;
+    }
+
+    .modal-content {
+        max-width: 100%;
+    }
+
+    .modal-header {
+        padding: 20px;
+    }
+
+    .modal-body {
+        padding: 24px;
+    }
+}
+.btn-profile-card {
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 10px;
+
+    background: rgba(212,166,63,.12);
+
+    color: #d4a63f;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+.btn-profile-card:hover {
+
+    background: rgba(212,166,63,.25);
+
+    transform: translateY(-2px);
+}

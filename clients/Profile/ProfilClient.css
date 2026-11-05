@@ -1,0 +1,557 @@
+/* ============================================
+   PROFIL CLIENT
+   ============================================ */
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.profile-header {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.page-title {
+    margin: 0;
+    text-align: center;
+}
+
+/* ============================================
+   CONTAINER
+   ============================================ */
+
+.profile-container {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+/* ============================================
+   PANELS
+   ============================================ */
+
+.admin-section {
+
+    background: rgba(255,255,255,.02);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 18px;
+
+    padding: 30px;
+}
+
+.section-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+.section-header h2 {
+
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+/* ============================================
+   CLIENT INFO
+   ============================================ */
+
+.client-summary {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+.client-main-info {
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+}
+
+.btn-report-package {
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 10px 16px;
+
+    background:
+        rgba(59,130,246,.15);
+
+    color:
+        #60a5fa;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.btn-report-package:hover {
+
+    background:
+        rgba(59,130,246,.25);
+
+    transform:
+        translateY(-2px);
+}
+
+.client-contact {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    color: #cfd6e4;
+}
+
+/* ============================================
+   PROFILE GRID
+   ============================================ */
+
+.client-profile-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 16px;
+}
+
+.profile-item {
+
+    background:
+        rgba(255,255,255,.03);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 14px;
+
+    padding: 16px;
+}
+
+.profile-item .label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #8f99ad;
+
+    text-transform: uppercase;
+}
+
+.profile-item span:last-child {
+
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* ============================================
+   NOTES
+   ============================================ */
+
+.client-notes-wrapper h3 {
+
+    margin: 0 0 12px;
+
+    color: #d4a63f;
+}
+
+.client-notes {
+
+    min-height: 100px;
+
+    padding: 18px;
+
+    background:
+        rgba(255,255,255,.03);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 14px;
+
+    color: #d6dce8;
+
+    line-height: 1.6;
+}
+
+/* ============================================
+   PACKAGES
+   ============================================ */
+
+.packages-grid {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.package-card {
+
+    background:
+        rgba(255,255,255,.03);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-left:
+        5px solid #d4a63f;
+
+    border-radius: 16px;
+
+    padding: 24px;
+}
+
+.package-card-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.package-title {
+
+    color: #ffffff;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.package-meta {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.package-badge {
+
+    padding: 6px 12px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(212,166,63,.12);
+
+    border:
+        1px solid rgba(212,166,63,.15);
+
+    color: #e4bf68;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ============================================
+   PACKAGE DETAILS
+   ============================================ */
+
+.package-details {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 14px;
+
+    margin-bottom: 24px;
+}
+
+.package-info-box {
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,.03);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+}
+
+.package-info-label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #8f99ad;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+}
+
+.package-info-value {
+
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ============================================
+   SESSIONS
+   ============================================ */
+
+.sessions-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(70px, 1fr));
+
+    gap: 12px;
+}
+.session-tile {
+  position: relative;
+    min-height: 110px;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    text-align: center;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+.session-number {
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: inherit;
+}
+.session-date {
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    opacity: .9;
+}
+.session-time {
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    opacity: .9;
+}
+/* Neîncepută */
+
+.session-new {
+
+    background:
+        rgba(255,255,255,.04);
+
+    color: #d6dce8;
+}
+
+/* În lucru */
+
+.session-progress {
+
+    background:
+        rgba(245,158,11,.12);
+
+    color: #fbbf24;
+
+    border-color:
+        rgba(245,158,11,.15);
+}
+
+/* Finalizată */
+
+.session-completed {
+
+    background:
+        rgba(34,197,94,.12);
+
+    color: #4ade80;
+
+    border-color:
+        rgba(34,197,94,.15);
+}
+
+.session-tile:hover {
+
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   EMPTY
+   ============================================ */
+
+.empty-message {
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: #8b93a7;
+
+    font-size: 18px;
+
+    border:
+        2px dashed rgba(255,255,255,.12);
+
+    border-radius: 12px;
+}
+.session-schedule-btn {
+
+    position: absolute;
+
+    top: 6px;
+    right: 6px;
+
+    width: 28px;
+    height: 28px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background:
+        rgba(255,255,255,.08);
+
+    color:
+        #d4a63f;
+
+    transition: .2s;
+}
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+
+    cursor: pointer;
+
+    filter:
+        invert(80%)
+        sepia(31%)
+        saturate(735%)
+        hue-rotate(356deg)
+        brightness(103%)
+        contrast(90%);
+}
+.session-schedule-btn:hover {
+
+    background:
+        rgba(212,166,63,.20);
+}
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    .profile-header {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .page-title {
+        order: -1;
+    }
+
+    .section-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .package-card-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
+.sessions-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill,
+        minmax(120px, 1fr));
+
+    gap: 12px;
+}
+.session-new {
+
+    background:
+        rgba(255,255,255,.04);
+
+    color:
+        #d6dce8;
+}
+.session-scheduled {
+
+    background:
+        rgba(59,130,246,.15);
+
+    color:
+        #60a5fa;
+
+    border:
+        2px solid
+        rgba(59,130,246,.20);
+}
+

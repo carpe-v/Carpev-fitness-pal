@@ -1,0 +1,248 @@
+/* ============================================
+   LOGO MANAGER
+   ============================================ */
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.logo-header {
+
+    display: grid;
+
+    grid-template-columns:
+        150px 1fr 150px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.page-title {
+
+    margin: 0;
+
+    text-align: center;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.logo-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+/* ============================================
+   PANELS
+   ============================================ */
+
+.admin-section {
+
+    background:
+        rgba(255,255,255,.02);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 18px;
+
+    padding: 30px;
+}
+
+/* ============================================
+   SECTION HEADER
+   ============================================ */
+
+.section-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+/* ============================================
+   PREVIEW
+   ============================================ */
+
+.logo-preview-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 250px;
+
+    padding: 20px;
+
+    background:
+        rgba(255,255,255,.03);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 16px;
+
+    margin-bottom: 20px;
+}
+
+.logo-preview {
+
+    max-width: 100%;
+
+    max-height: 220px;
+
+    object-fit: contain;
+}
+
+.logo-preview:empty {
+
+    display: none;
+}
+
+/* ============================================
+   ACTIONS
+   ============================================ */
+
+.logo-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+/* ============================================
+   INFO
+   ============================================ */
+
+.logo-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.logo-info p {
+
+    margin: 0;
+
+    padding: 14px;
+
+    background:
+        rgba(255,255,255,.03);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 12px;
+
+    color: #d6dce8;
+
+    line-height: 1.6;
+}
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+
+.logo-preview-wrapper:has(
+    .logo-placeholder
+) {
+
+    color: #8b93a7;
+}
+
+.logo-placeholder {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    color: #8b93a7;
+
+    text-align: center;
+}
+
+.logo-placeholder-icon {
+
+    font-size: 48px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    .logo-header {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .page-title {
+
+        order: -1;
+    }
+
+    .logo-actions {
+
+        flex-direction: column;
+    }
+
+    .logo-actions .btn-save,
+    .logo-actions .btn-cancel {
+
+        width: 100%;
+    }
+
+    .logo-preview-wrapper {
+
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo-preview {
+
+        max-height: 160px;
+    }
+}
